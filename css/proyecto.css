@@ -1,0 +1,124 @@
+/* === GENERALES === */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('../img/Fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.proyecto-detalle {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.proyecto-detalle h1,
+.proyecto-detalle h1#titulo {
+  color: #fff !important;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #f1f1f1;
+}
+
+.descripcion {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  color: #ddd;
+  line-height: 1.6;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* === GALERÍA MINIATURAS === */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.galeria img {
+  width: 280px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.galeria img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.2);
+}
+
+/* === BOTÓN VOLVER === */
+.btn-volver {
+  background-color: #444;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 1rem;
+}
+
+.btn-volver:hover {
+  background-color: #333;
+}
+
+/* === CARRUSEL DENTRO DEL MODAL === */
+.carousel-inner img {
+  max-height: 90vh;
+  object-fit: contain;
+  background-color: #000;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Modal fondo negro sin bordes */
+.modal-content.bg-black {
+  background-color: #000;
+  border: none;
+  border-radius: 0;
+}
+
+/* Controladores del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* iconos blancos */
+}
+
+.btn-close-white {
+  filter: invert(1);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .galeria img {
+    width: 100%;
+    height: auto;
+  }
+
+  .proyecto-detalle {
+    padding: 2rem 1rem;
+  }
+}
